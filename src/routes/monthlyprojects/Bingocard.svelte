@@ -3,12 +3,23 @@
 	export let memberSquares;
 	export let dir;
 	let squareSize = 200;
+	let current = 'foo';
+
+	function test() {
+		console.log('test test');
+	}
 </script>
 
+<button on:click{test}>Test</button>
+<div class="bingoSquare">
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<img class="bingoSquare" src="./images/june/olle/13.jpg" alt="test" />
+</div>
 <div class="bingoCard">
 	{#each bingoSquares as bingoSquare}
 		{#if memberSquares.includes(bingoSquare.id)}
 			<div class="bingoSquare">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<img
 					class="bingoSquare"
 					src="./images/june/{dir}/{bingoSquare.id}.jpg"
@@ -47,11 +58,8 @@
 		border-color: black;
 		border-width: 1px;
 	}
-	.bingoSquare:hover > img {
-		position: relative;
-		top: 350px;
-		left: 200px;
-		height: 500px;
-		width: auto;
+	.selected {
+		background-color: #ff3e00;
+		color: white;
 	}
 </style>
