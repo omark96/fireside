@@ -12,6 +12,7 @@
 	<title>Monthly Projects</title>
 	<meta name="description" content="Fireside's monthly projects" />
 </svelte:head>
+
 <div>
 	{#each memberSquares as { name, dir, images }}
 		<h1>{name}</h1>
