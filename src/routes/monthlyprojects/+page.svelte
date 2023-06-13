@@ -3,8 +3,11 @@
 	import { bingoSquares } from './squaresData.js';
 	import { memberSquares } from './memberData.js';
 
-	function test() {
-		console.log('test test');
+	let m = { x: 0, y: 0 };
+
+	function handleMousemove(event) {
+		m.x = event.clientX;
+		m.y = event.clientY;
 	}
 </script>
 
@@ -13,11 +16,9 @@
 	<meta name="description" content="Fireside's monthly projects" />
 </svelte:head>
 
-<button
-	on:click={(e) => {
-		console.log(e.target);
-	}}>Test</button
->
+<div on:mousemove={handleMousemove}>
+	The mouse position is {m.x} x {m.y}
+</div>
 
 <div>
 	{#each memberSquares as { name, dir, images }}
