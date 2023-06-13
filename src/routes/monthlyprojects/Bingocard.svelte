@@ -10,26 +10,21 @@
 		} else {
 			current = event.target.id;
 		}
+		console.log(current);
 	}
 </script>
-
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<img
-	class="bingoSquare {current === 'img0' ? 'selected' : ''}"
-	id="img0"
-	src="./images/june/olle/0.jpg"
-	alt="test test"
-	on:click={handleClick}
-/>
 
 <div class="bingoCard">
 	{#each bingoSquares as bingoSquare}
 		{#if memberSquares.includes(bingoSquare.id)}
 			<div class="bingoSquare">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<img
-					class="bingoSquare"
+					class="bingoSquare {current === 'img' + bingoSquare.id ? 'selected' : ''}"
+					id="img{bingoSquare.id}"
 					src="./images/june/{dir}/{bingoSquare.id}.jpg"
 					alt={bingoSquare.text}
+					on:click={handleClick}
 				/>
 			</div>
 		{:else}
@@ -45,6 +40,7 @@
 		font-size: 25px;
 	}
 	.bingoCard {
+		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		align-content: flex-start;
@@ -65,8 +61,15 @@
 		border-width: 1px;
 	}
 	.selected {
-		position: relative;
-		width: 500px;
-		height: 500px;
+		position: absolute;
+		max-width: 900px;
+		max-height: 900px;
+		height: auto;
+		width: auto;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
 	}
 </style>
