@@ -4,13 +4,9 @@
 	export let dir;
 	let squareSize = 200;
 	let current;
-	function handleClick(event) {
-		if (event.target.id === current) {
-			current = 'none';
-		} else {
-			current = event.target.id;
-		}
-	}
+	const handleClick = (event) => {
+		current = event.target.id === current ? 'none' : event.target.id;
+	};
 </script>
 
 <div class="bingoCard">
