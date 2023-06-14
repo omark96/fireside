@@ -7,6 +7,6 @@ export const memberSquares = [
     {
         name: "Anton",
         dir: "anton",
-        images: [],
+        images: [5, 10, 20],
     }
 ];

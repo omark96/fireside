@@ -64,7 +64,7 @@
 	.not-selected {
 		height: 100%;
 		width: 100%;
-		overflow: hidden;
+		object-fit: cover;
 	}
 	.selected {
 		position: absolute;
@@ -77,5 +77,7 @@
 		top: 0;
 		bottom: 0;
 		margin: auto;
+		border-style: solid;
+		border-color: black;
 	}
 </style>
