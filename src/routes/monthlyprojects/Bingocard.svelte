@@ -10,7 +10,6 @@
 		} else {
 			current = event.target.id;
 		}
-		console.log(current);
 	}
 </script>
 
@@ -20,7 +19,9 @@
 			<div class="bingoSquare">
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<img
-					class="bingoSquare {current === 'img' + bingoSquare.id ? 'selected' : ''}"
+					class="bingoImage {current === 'img' + bingoSquare.id
+						? 'selected'
+						: 'not-selected'}"
 					id="img{bingoSquare.id}"
 					src="./images/june/{dir}/{bingoSquare.id}.jpg"
 					alt={bingoSquare.text}
@@ -51,14 +52,19 @@
 	.bingoSquare {
 		margin: 0;
 		text-align: center;
-		height: 198px;
-		width: 198px;
+		height: calc(20% - 2px);
+		width: calc(20% - 2px);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		border-style: solid;
 		border-color: black;
 		border-width: 1px;
+	}
+	.not-selected {
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
 	}
 	.selected {
 		position: absolute;
