@@ -2,11 +2,10 @@
 	export let bingoSquares;
 	export let memberSquares;
 	export let dir;
-	let squareSize = 200;
 	let current;
-	const handleClick = (event) => {
+	function handleClick(event) {
 		current = event.target.id === current ? 'none' : event.target.id;
-	};
+	}
 </script>
 
 <div class="bingoCard">
