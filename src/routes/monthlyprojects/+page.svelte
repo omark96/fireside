@@ -1,5 +1,6 @@
 <script>
 	import Bingocard from './Bingocard.svelte';
+	import Bingocard2 from './Bingocard2.svelte';
 	import { bingoSquares } from './squaresData.js';
 	import { memberSquares } from './memberData.js';
 	let activeTabValue = 'Olle';
@@ -29,7 +30,7 @@
 	</ul>
 	{#each memberSquares as { dir, images, name }}
 		{#if activeTabValue === name}
-			<Bingocard {bingoSquares} memberSquares={images} {dir} />
+			<Bingocard2 {bingoSquares} memberSquares={images} {dir} />
 		{/if}
 	{/each}
 	<!-- {#each memberSquares as { dir, images }}
