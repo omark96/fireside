@@ -73,7 +73,5 @@
 		top: 0;
 		bottom: 0;
 		margin: auto;
-		border-style: solid;
-		border-color: black;
 	}
 </style>
