@@ -30,7 +30,7 @@
 	</ul>
 	{#each memberSquares as { dir, images, name }}
 		{#if activeTabValue === name}
-			<Bingocard2 {bingoSquares} memberSquares={images} {dir} />
+			<Bingocard {bingoSquares} memberSquares={images} {dir} />
 		{/if}
 	{/each}
 	<!-- {#each memberSquares as { dir, images }}
