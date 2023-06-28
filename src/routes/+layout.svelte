@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '@picocss/pico';
 	import '../app.css';
-	import Header from './header.svelte';
-	import Footer from './footer.svelte';
+	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 	import { page } from '$app/stores';
 </script>
 
