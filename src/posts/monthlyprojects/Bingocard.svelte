@@ -14,9 +14,7 @@
 			<div class="bingoSquare">
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<img
-					class="bingoImage {current === 'img' + bingoSquare.id
-						? 'selected'
-						: 'not-selected'}"
+					class="bingoImage {current === 'img' + bingoSquare.id ? 'selected' : 'not-selected'}"
 					id="img{bingoSquare.id}"
 					src="./images/june/{dir}/{bingoSquare.id}.jpg"
 					alt={bingoSquare.text}
@@ -25,7 +23,7 @@
 			</div>
 		{:else}
 			<div class="bingoSquare">
-				<h1>{bingoSquare.text}</h1>
+				<small>{bingoSquare.text}</small>
 			</div>
 		{/if}
 	{/each}
@@ -36,19 +34,23 @@
 		font-size: 25px;
 	}
 	.bingoCard {
+		margin: 0;
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		align-content: flex-start;
-		background-color: white;
-		width: 1000px;
-		height: 1000px;
+		background-color: #111111;
+		width: 100%;
+		aspect-ratio: 1;
 	}
+
 	.bingoSquare {
 		margin: 0;
 		text-align: center;
-		height: calc(20% - 2px);
-		width: calc(20% - 2px);
+		font-size: 10px;
+		font-weight: bold;
+		height: calc(20%);
+		width: calc(20%);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -63,8 +65,8 @@
 	}
 	.selected {
 		position: absolute;
-		max-width: 900px;
-		max-height: 900px;
+		max-width: 100%;
+		max-height: 100%;
 		height: auto;
 		width: auto;
 		left: 0;
@@ -72,5 +74,10 @@
 		top: 0;
 		bottom: 0;
 		margin: auto;
+	}
+	@media (min-width: 768px) {
+		small {
+			font-size: 1rem;
+		}
 	}
 </style>
