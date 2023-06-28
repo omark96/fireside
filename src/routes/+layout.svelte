@@ -21,3 +21,9 @@
 {/if}
 <!-- Footer -->
 <Footer />
+
+<style>
+	main {
+		min-height: calc(100vh - 180px);
+	}
+</style>

@@ -80,6 +80,12 @@
 		animation-delay: 0ms, 4776ms;
 	}
 
+	@media screen and (min-width: 768px) {
+		.welcome-text {
+			font-size: 6rem;
+		}
+	}
+
 	@keyframes move1 {
 		0% {
 			transform: translateX(-44vw) translateY(42vh) scale(0.71);
