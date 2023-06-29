@@ -5,7 +5,7 @@
 <nav class="container">
 	<!-- Title -->
 	<ul class="logo">
-		<img src="fireside.svg" />
+		<li><a href="/"><img src="fireside.svg" alt="Fireside logo" /></a></li>
 		<li><a href="/"><strong> {config.title} </strong> </a></li>
 	</ul>
 	<!-- Navigation -->
@@ -21,10 +21,13 @@
 
 <style>
 	.logo {
-		display: flex;
-		flex-direction: row;
+		font-size: 1.5rem;
 	}
-	.logo > img {
-		height: 50%;
+	.logo > li {
+		padding: 0;
+	}
+	.logo img {
+		height: 2.5rem;
+		width: auto;
 	}
 </style>
