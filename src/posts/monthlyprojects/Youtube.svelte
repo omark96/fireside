@@ -4,6 +4,7 @@
 
 <!-- svelte-ignore a11y-missing-attribute -->
 <iframe
+	loading="lazy"
 	src="https://www.youtube.com/embed/{link}"
 	frameborder="0"
 	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
