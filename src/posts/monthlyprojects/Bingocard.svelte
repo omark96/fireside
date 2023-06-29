@@ -16,7 +16,7 @@
 				<img
 					class="bingoImage {current === 'img' + bingoSquare.id ? 'selected' : 'not-selected'}"
 					id="img{bingoSquare.id}"
-					src="./images/june/{dir}/{bingoSquare.id}.jpg"
+					src="./images/jun/{dir}/{bingoSquare.id}.jpg"
 					alt={bingoSquare.text}
 					on:click={handleClick}
 				/>

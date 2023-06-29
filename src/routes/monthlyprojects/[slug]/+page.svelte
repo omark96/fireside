@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let data;
 	import { page } from '$app/stores';
+	import { formatDate } from '$lib/utils';
 
 	let currentPath = $page.url.pathname.split('/');
 </script>
@@ -16,7 +17,7 @@
 	<!-- Title -->
 	<hgroup>
 		<h1>{data.meta.title}</h1>
-		<h2>{data.meta.month} {data.meta.year}</h2>
+		<h2>{formatDate(data.meta.date)}</h2>
 	</hgroup>
 	<!-- Post -->
 	<div>

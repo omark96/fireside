@@ -1,5 +1,6 @@
 <script lang="ts">
 	import * as config from '$lib/config';
+	import { formatDate } from '$lib/utils';
 
 	export let data;
 </script>
@@ -9,19 +10,22 @@
 </svelte:head>
 
 <!-- Posts -->
-
+<h1>Monthly Projects</h1>
 {#each data.posts as post}
 	<a href={post.slug} class="card-link contrast">
 		<article>
 			<img
-				src="./monthlyprojects/images/{post.month.toLowerCase()}/card-image.jpg"
+				src="./monthlyprojects/images/{new Date(post.date)
+					.toDateString()
+					.slice(4, 7)
+					.toLowerCase()}/card-image.jpg"
 				alt={post.title}
 				class="card-image"
 			/>
 			<div class="card-text">
 				<hgroup>
 					<h1>{post.title}</h1>
-					<h2>{post.month} {post.year}</h2>
+					<h2>{formatDate(post.date)}</h2>
 				</hgroup>
 				{post.description}
 			</div>
