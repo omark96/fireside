@@ -14,9 +14,10 @@
 
 <article>
 	<!-- Title -->
-
-	<h1>{data.meta.title}</h1>
-
+	<hgroup>
+		<h1>{data.meta.title}</h1>
+		<h2>{data.meta.month} {data.meta.year}</h2>
+	</hgroup>
 	<!-- Post -->
 	<div>
 		<svelte:component this={data.content} />

@@ -17,9 +17,6 @@
 			<a href="/about">About</a>
 		</li>
 	</ul>
-	<ul>
-		<li>xx</li>
-	</ul>
 </nav>
 
 <style>
