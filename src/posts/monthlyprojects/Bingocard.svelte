@@ -1,8 +1,7 @@
 <script>
 	export let bingoSquares;
 	export let memberSquares;
-	export let dir;
-	import { fade } from 'svelte/transition';
+	export let name;
 
 	let current;
 	function handleClick(event) {
@@ -10,7 +9,7 @@
 	}
 </script>
 
-<div class="bingoCard" transition:fade>
+<div class="bingoCard">
 	{#each bingoSquares as bingoSquare}
 		{#if memberSquares.includes(bingoSquare.id)}
 			<div class="bingoSquare">
@@ -19,7 +18,7 @@
 				<img
 					class="bingoImage {current === 'img' + bingoSquare.id ? 'selected' : 'not-selected'}"
 					id="img{bingoSquare.id}"
-					src="./images/jun/{dir}/{bingoSquare.id}.jpg"
+					src="./images/jun/{name}/{bingoSquare.id}.jpg"
 					alt={bingoSquare.text}
 					on:click={handleClick}
 				/>
