@@ -15,6 +15,7 @@
 		{#if memberSquares.includes(bingoSquare.id)}
 			<div class="bingoSquare">
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 				<img
 					class="bingoImage {current === 'img' + bingoSquare.id ? 'selected' : 'not-selected'}"
 					id="img{bingoSquare.id}"
@@ -32,9 +33,6 @@
 </div>
 
 <style>
-	h1 {
-		font-size: 25px;
-	}
 	.bingoCard {
 		margin: 0;
 		position: relative;
