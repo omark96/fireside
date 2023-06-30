@@ -1391,7 +1391,7 @@
 		}
 		5% {
 			opacity: 1;
-			box-shadow: 0 0 2vw 0.4vw yellow;
+			box-shadow: 0 0 4vw 0.8vw yellow;
 		}
 	}
 </style>
