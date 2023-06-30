@@ -2,11 +2,11 @@ export const memberSquares = [
     {
         name: "Olle",
         dir: "olle", 
-        images: [0, 13, 24],
+        images: [0, 1, 2, 3, 4, 5, 11, 13, 15, 17, 18, 20, 21, 23, 24],
     },
     {
         name: "Anton",
         dir: "anton",
-        images: [5, 10, 20],
+        images: [18],
     }
 ];

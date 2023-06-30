@@ -2,13 +2,15 @@
 	export let bingoSquares;
 	export let memberSquares;
 	export let dir;
+	import { fade } from 'svelte/transition';
+
 	let current;
 	function handleClick(event) {
 		current = event.target.id === current ? 'none' : event.target.id;
 	}
 </script>
 
-<div class="bingoCard">
+<div class="bingoCard" transition:fade>
 	{#each bingoSquares as bingoSquare}
 		{#if memberSquares.includes(bingoSquare.id)}
 			<div class="bingoSquare">

@@ -27,7 +27,7 @@
 					<h1>{post.title}</h1>
 					<h2>{formatDate(post.date)}</h2>
 				</hgroup>
-				{post.description}
+				<div class="post-description"><p>{post.description}</p></div>
 			</div>
 		</article>
 	</a>
@@ -43,6 +43,8 @@
 		text-decoration: none;
 	}
 	.card-text {
+		display: flex;
+		flex-direction: column;
 		margin: 1rem;
 	}
 	.card-image {
@@ -53,6 +55,7 @@
 		object-fit: cover;
 		margin-bottom: 1rem;
 	}
+
 	@media (min-width: 768px) {
 		article {
 			display: flex;
