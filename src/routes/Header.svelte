@@ -1,12 +1,17 @@
 <script lang="ts">
 	import * as config from '$lib/config';
+	import Firesidelogo from './Firesidelogo.svelte';
 </script>
 
 <nav class="container">
 	<!-- Title -->
 	<ul class="logo">
-		<li><a href="/"><img src="fireside.svg" alt="Fireside logo" /></a></li>
-		<li><a href="/"><strong> {config.title} </strong> </a></li>
+		<li>
+			<a href="/"
+				><Firesidelogo />
+				<div class="logo-text">{config.title}</div></a
+			>
+		</li>
 	</ul>
 	<!-- Navigation -->
 	<ul class="links">
@@ -26,8 +31,10 @@
 	.logo > li {
 		padding: 0;
 	}
-	.logo img {
-		height: 2.5rem;
-		width: auto;
+	.logo a {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		font-weight: bold;
 	}
 </style>
