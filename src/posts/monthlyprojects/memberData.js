@@ -7,7 +7,7 @@ export const memberSquares = [
     {
         id: 1,
         name: "anton",
-        images: [18],
+        images: [3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 16, 17, 18, 19, 20, 21, 22],
     },
     {
         id: 2,
