@@ -17,6 +17,6 @@ export const memberSquares = [
     {
         id: 3,
         name: "wille",
-        images: [14, 22],
+        images: [14, 20, 22],
     }
 ];
